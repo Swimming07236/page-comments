@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "index.cjs",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["node_modules/@mathjax/**/*", "node_modules/mhchemparser/**/*", "node_modules/ip2region/data/**"]
+      }
+    }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "index.cjs" }]
+}
